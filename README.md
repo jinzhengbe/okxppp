@@ -11,6 +11,22 @@
 - **数据收集与存储**：收集价格、交易、订单簿和情绪数据
 - **数据库管理**：管理InfluxDB和PostgreSQL数据库
 
+## 快速安装
+
+我们提供了一个简单的安装脚本，帮助你快速设置环境：
+
+```bash
+# 克隆仓库
+git clone https://github.com/jinzhengbe/okxppp.git
+cd okxppp
+
+# 运行安装脚本
+chmod +x setup.sh
+./setup.sh
+```
+
+详细的安装和配置说明请参考 [安装指南](INSTALL.md)。
+
 ## 最新功能：数据库管理
 
 我们新增了数据库管理功能，使用InfluxDB和PostgreSQL存储和管理加密货币数据：
@@ -52,8 +68,8 @@
 
 1. 克隆仓库：
    ```
-   git clone https://github.com/yourusername/okx_trading_app.git
-   cd okx_trading_app
+   git clone https://github.com/jinzhengbe/okxppp.git
+   cd okxppp
    ```
 
 2. 安装依赖：
@@ -131,6 +147,13 @@ services:
 - **API**：OKX REST API和WebSocket API
 - **数据库**：InfluxDB和PostgreSQL
 - **容器化**：Docker
+
+## 交易策略
+
+默认交易策略：
+- 当币种涨幅达到3%时买入
+- 当涨幅超过5%时卖出50%持仓
+- 当涨幅超过100%时全部卖出
 
 ## 贡献
 
